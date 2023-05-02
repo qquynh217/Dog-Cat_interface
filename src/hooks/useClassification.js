@@ -12,15 +12,15 @@ export const useClassifiaction = () => {
   const [result, setResult] = useState(initResult);
   const getResult = async () => {
     setLoading(true);
-    // const res = await fetch("http://127.0.0.1:5000/predict", {
-    //   method: "POST",
-    //   body: JSON.stringify({ img: fname }),
-    // });
-    // const data = await res.json();
-    const data = {
-      label: "Dog",
-      confidence: "99.00%",
-    };
+    const res = await fetch("http://127.0.0.1:5000/predict", {
+      method: "POST",
+      body: JSON.stringify({ img: fname }),
+    });
+    const data = await res.json();
+    // const data = {
+    //   label: "Dog",
+    //   confidence: "99.00%",
+    // };
     // console.log(data);
     setResult({ ...data });
     setLoading(false);
