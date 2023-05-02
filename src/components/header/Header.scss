@@ -1,0 +1,35 @@
+.header {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .icon {
+    width: 32px;
+  }
+  .navbar {
+    display: flex;
+    gap: 78px;
+    align-items: center;
+    font-weight: 600;
+    .item {
+      text-transform: uppercase;
+      color: #b9bec5;
+      &.active,
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .icon {
+      font-size: 24px;
+    }
+  }
+}
